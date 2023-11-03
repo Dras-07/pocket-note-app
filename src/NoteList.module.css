@@ -1,0 +1,57 @@
+
+.notes-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px; 
+    border: 2px solid black;
+    text-align: center; 
+}
+
+  .notes-group-name {
+    background-color:red;
+    position: top;
+    padding:0;
+
+  }
+
+.notes-input textarea {
+    width: 100%;
+    border: none; 
+    outline: none;
+    resize: none; 
+  }
+  
+  .add-note-button-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .add-note-button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px; 
+  }
+  
+
+  .notes-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .notes-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .notes-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
