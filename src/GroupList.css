@@ -1,0 +1,37 @@
+/* GroupList.css */
+.group-list {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+  }
+  
+  .group-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .group-label {
+    width: 35px;
+    height: 35px;
+    border-radius: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--label-color);
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  .group-name {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+  

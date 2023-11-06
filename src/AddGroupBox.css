@@ -1,0 +1,75 @@
+/* AddGroupBox.css */
+.add-group-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  
+  .add-group-box h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 29px;
+    font-weight: 500;
+    font-family: Roboto;
+  }
+  
+  .add-group-box .input-line,
+  .add-group-box .color-line {
+    display: flex;
+    align-items: center; /* Center align elements in one line */
+    text-align: left;
+    margin-bottom: 20px;
+
+  }
+  
+  .add-group-box span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .add-group-box input {
+    flex: 1; /* Take up the remaining space */
+    padding: 10px;
+    border: 2px solid  #CCCCCC;
+    border-radius: 22px;
+  }
+  
+  .add-group-box .color-options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-group-box .color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .add-group-box .create-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right; /* Align the button to the right */
+  }
+  
+.create-button {
+    margin-top:10px;
+}
+  .color-option-container {
+    display: flex;
+  }
+  .color-option:hover{
+    border: 1px solid rgb(111, 192, 205);
+  }
