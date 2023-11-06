@@ -9,14 +9,6 @@
   background-color: white;
 }
 
-.timestamp {
-  display: flex;
-  justify-content: space-between;
-}
-
-.time, .date {
-  width: 48%;
-}
 
 .notes-group-name {
   background-color: #E8E8E8;
@@ -48,56 +40,41 @@
   border-radius: 5px;
 }
 
-.notes-list {
-  margin-top: 0;
-  padding-top: 15px;
-  padding-bottom: 1px;
-  padding-left: 10px;
-  background-color: #E8E8E8;
-}
-
-.notes-list h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.notes-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.notes-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-.notes-main-div{ 
+.note {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  width: 100%;
-  background-color: red;
-  margin-top: 10px; /* Adjust the margin as needed */
+  margin: 10px 0;
 }
 
-.left-div {
-  flex: 1;
-  background-color: green;
-  /* padding: 5px; */
-  /* text-align: center; */
+.date-container {
+  width: 30%;
+  padding: 0 10px;
 }
 
-.right-div {
-  flex: 2;
-  padding: 5px;
-  text-align: center;
-  margin-left:40px ;
-  background-color: red; /* Adjust the background color as needed */
+.note-container {
+  width: 70%;
+  padding: 0 10px;
+}
+.top-section {
+  background-color:rgb(219, 216, 216);
+  display: flex;
+  height: 40px;
 }
 
-/* More of your existing CSS styles */
-/* This code will create the structure you described with a "left div" containing "Time" and "Date" on the left and a "right div" containing "NOTE" on the right, with some space in between. You can adjust the styles and margins as needed. */
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--label-color);
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
 
-
-
-
-
+.group-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

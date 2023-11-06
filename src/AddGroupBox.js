@@ -3,7 +3,7 @@ import './AddGroupBox.css';
 
 function AddGroupBox({ addGroup, onClose, setSelectedLabelColor }) {
   const [newGroupName, setNewGroupName] = useState('');
-  const [selectedColor, setSelectedColor] = useState('#B38BFA'); // Default color
+  const [selectedColor, setSelectedColor] = useState('#B38BFA');
 
   const handleCreateGroup = () => {
     if (newGroupName.trim() !== '') {
@@ -37,7 +37,6 @@ function AddGroupBox({ addGroup, onClose, setSelectedLabelColor }) {
           <div className="color-option" style={{ backgroundColor: '#43E6FC' }} onClick={() => handleColorSelection('#43E6FC')}></div>
           <div className="color-option" style={{ backgroundColor: '#F19576' }} onClick={() => handleColorSelection('#F19576')}></div>
           <div className="color-option" style={{ backgroundColor: '#0047FF' }} onClick={() => handleColorSelection('#0047FF')}></div>
-          {/* Add more color options here */}
         </div>
       </div>
       <button onClick={handleCreateGroup} className="create-button">

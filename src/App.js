@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './App.css';
+import  './App.css';
 import GroupList from './GroupList';
 import NotesList from './NoteList';
 import AddGroupBox from './AddGroupBox';
@@ -48,7 +48,7 @@ function App() {
         <GroupList
           groups={Object.keys(groups)}
           setSelectedGroup={setSelectedGroup}
-          groupColors={selectedLabelColor} // Pass the selectedLabelColor
+          groupColors={selectedLabelColor} 
         />
       </div>
       <div className="right-side">
@@ -57,7 +57,7 @@ function App() {
             selectedGroup={selectedGroup}
             groups={groups}
             setNotes={setNotes}
-            groupColors={selectedLabelColor} // Pass the selectedLabelColor
+            groupColors={selectedLabelColor} 
           />
         ) : (
           <h2>Pocket Notes</h2>
