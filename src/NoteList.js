@@ -42,14 +42,16 @@ function NotesList({ selectedGroup, groups, setNotes, groupColors }) {
     <div className={styles['notes-list']}>
       <div className={styles['top-section']}>
         <div className={styles['label']}>
-          <span style={labelStyle}>
-            {selectedGroup.substring(0, 2).toUpperCase()}
-          </span>
+        <div className={styles['label']}>
+  <span style={{ backgroundColor: groupLabelColor }} className={styles['circle-label']}>
+    {selectedGroup.substring(0, 2).toUpperCase()}
+  </span>
+</div>
         </div>
         <div className={styles['group-name']}>{selectedGroup}</div>
       </div>
 
-      <ul>
+      <ul className={styles['list']}>
   {notesForSelectedGroup.map((note, index) => {
     const parts = note.split('%');
 
