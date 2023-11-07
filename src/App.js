@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import  './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.css';
 import GroupList from './GroupList';
 import NotesList from './NoteList';
 import AddGroupBox from './AddGroupBox';
-import mainImage from './main.png'; 
-
+import mainImage from './main.png';
 
 function App() {
   const [groups, setGroups] = useState({});
@@ -12,25 +11,59 @@ function App() {
   const [showAddGroupBox, setShowAddGroupBox] = useState(false);
   const [selectedLabelColor, setSelectedLabelColor] = useState({});
 
+  useEffect(() => {
+    const storedGroups = localStorage.getItem('groups');
+    if (storedGroups) {
+      setGroups(JSON.parse(storedGroups));
+    }
+
+    
+    const storedSelectedGroup = localStorage.getItem('selectedGroup');
+    if (storedSelectedGroup) {
+      setSelectedGroup(storedSelectedGroup);
+    }
+
+  
+    const storedLabelColors = localStorage.getItem('labelColors');
+    if (storedLabelColors) {
+      setSelectedLabelColor(JSON.parse(storedLabelColors));
+    }
+  }, []);
+
+  
   const addGroup = (groupName, labelColor) => {
     const updatedGroups = {
       ...groups,
       [groupName]: [],
     };
+
     const updatedColors = {
       ...selectedLabelColor,
       [groupName]: labelColor,
     };
+
     setGroups(updatedGroups);
     setSelectedLabelColor(updatedColors);
     setSelectedGroup(groupName);
+
+    
+    localStorage.setItem('groups', JSON.stringify(updatedGroups));
+    localStorage.setItem('selectedGroup', groupName);
+    localStorage.setItem('labelColors', JSON.stringify(updatedColors));
   };
 
+  
   const setNotes = (groupName, notes) => {
     setGroups({
       ...groups,
       [groupName]: notes,
     });
+
+    
+    localStorage.setItem('groups', JSON.stringify({
+      ...groups,
+      [groupName]: notes,
+    }));
   };
 
   return (
@@ -50,7 +83,7 @@ function App() {
         <GroupList
           groups={Object.keys(groups)}
           setSelectedGroup={setSelectedGroup}
-          groupColors={selectedLabelColor} 
+          groupColors={selectedLabelColor}
         />
       </div>
       <div className="right-side">
@@ -59,7 +92,7 @@ function App() {
             selectedGroup={selectedGroup}
             groups={groups}
             setNotes={setNotes}
-            groupColors={selectedLabelColor} 
+            groupColors={selectedLabelColor}
           />
         ) : (
           <div className='Home'>

@@ -10,6 +10,10 @@ function AddGroupBox({ addGroup, onClose, setSelectedLabelColor }) {
       addGroup(newGroupName, selectedColor);
       setNewGroupName('');
       onClose();
+
+      const updatedGroups = JSON.parse(localStorage.getItem('groups')) || {};
+      updatedGroups[newGroupName] = [];
+      localStorage.setItem('groups', JSON.stringify(updatedGroups));
     }
   };
 
